@@ -39,6 +39,11 @@ LinearEquation Class
         getCoordY1(String coord2) which will return an integer
             will get the integer value of the y2 value
 
+        toString() will return an object's value as a String
+
+
+
+
 
 
 
@@ -50,10 +55,11 @@ EquationRunner Class:
     4. Initialize 4 new variables, x1, y1, x2, and y2, which will all be integers
         a. using the getCoord methods (which will use substring methods and String conversions) will retrieved the integer values from the coordinate points
     5. Print the first coordinate pair (coord1)
-    6. Print the second coordinate pait (coord2)
+    6. Print the second coordinate pair (coord2)
     7. Print the slope of the line by calling the slopeCalc() method
     8. Print the Y-intercept by calling the yInt() method
     9. Print the Slope intercept form by calling the slopeIntForm() method
    10. Print the distance between the two points by using the distanceCalc() method
-   11. Ask the user to enter a third coordinate point and store that as a varible called x3 (double)
-   12. Print the coordinate pair of that x3 by calling the calcThridPoint() method
+   11. Ask the user to enter a third coordinate point and store that as a variable called x3 (double)
+   12. Print the coordinate pair of that x3 by calling the calcThirdPoint() method
+   13. Lastly I will include a rounding method to round all the numbers to hundredths place
