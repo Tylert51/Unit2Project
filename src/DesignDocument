@@ -1,0 +1,59 @@
+LinearEquation Class
+    Instance Variables:
+        1. x1 which is an int representing the first x coordinate of the user input
+        2. y1 which is an int representing the first y coordinate of the user input
+        3. x2 which is an int representing the second x coordinate of the user input
+        4. y2 which is an int representing the second y coordinate of the user input
+        5. slope which is a double representing the slope of the equation
+    Constructor:
+        LinearEquation(int x1, int y1, int x2, int y2)
+            These will be the 4 points provide by the user and although they enter in a String, I will use a substring method to get the integer values
+            Will hold the values of the equations points and store them in their respective variables
+
+    Methods:
+        slopeCalc() which will return a String
+            this will calculate the slope of the equation and return it in fraction form
+            will also calculate the decimal version of the slope and store it in the slope variable
+
+        yInt()  which will return a double value
+            this method will calculate the y-intercept of the equation (the b value)
+
+        slopeIntForm() which will return a string
+            this will return the expression and put it in slope intercept from (y = mx +b)
+
+        distanceCalc() which will return a double
+            this will calculate the distance between the two provide points
+
+        calcThirdPoint(double x3) will return a string
+            will solve for the y-value for the provide x-value(which can be a double) and return it in coordinate form
+
+        getCoordX1(String coord1) which will return an integer
+            will get the integer value of the x1 value
+
+        getCoordY1(String coord1) which will return an integer
+            will get the integer value of the y1 value
+
+        getCoordX2(String coord2) which will return an integer
+            will get the integer value of the x2 value
+
+        getCoordY1(String coord2) which will return an integer
+            will get the integer value of the y2 value
+
+
+
+
+EquationRunner Class:
+    1. Prompt the user for their name and store it as a variable name (String)
+    2. Greet the user with their name and ask them to enter their two coordinate values
+        a. will store both these coordinate values as coord1 and coord2 respectively (both are Strings)
+    3. Instantiate a new object using the LinearEquation constructor
+    4. Initialize 4 new variables, x1, y1, x2, and y2, which will all be integers
+        a. using the getCoord methods (which will use substring methods and String conversions) will retrieved the integer values from the coordinate points
+    5. Print the first coordinate pair (coord1)
+    6. Print the second coordinate pait (coord2)
+    7. Print the slope of the line by calling the slopeCalc() method
+    8. Print the Y-intercept by calling the yInt() method
+    9. Print the Slope intercept form by calling the slopeIntForm() method
+   10. Print the distance between the two points by using the distanceCalc() method
+   11. Ask the user to enter a third coordinate point and store that as a varible called x3 (double)
+   12. Print the coordinate pair of that x3 by calling the calcThridPoint() method
