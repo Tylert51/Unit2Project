@@ -6,9 +6,9 @@ public class EquationRunner {
         Scanner s = new Scanner(System.in);
         System.out.println("Hey, what is your name?");
         String name = s.nextLine();
-        System.out.println("Hey " + name + "!\nEnter your first Coordinate Point: ");
+        System.out.print("Hey " + name + "!\nEnter your first Coordinate Point: ");
         String coord1 = s.nextLine();
-        System.out.println("Enter your second Coordinate Point: ");
+        System.out.print("Enter your second Coordinate Point: ");
         String coord2 = s.nextLine();
 
         //instantiating the object
@@ -18,7 +18,7 @@ public class EquationRunner {
         System.out.println(equation1.toString());
 
         //calculation and question of x3
-        System.out.println("Enter a third x-value: ");
+        System.out.print("Enter a third x-value: ");
         double x3 = s.nextDouble();
         System.out.println("Solved coordinate point is: " + equation1.calcThirdPoint(x3));
     }

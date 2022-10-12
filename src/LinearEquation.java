@@ -1,12 +1,12 @@
 public class LinearEquation {
     //instance variables
-    int x1;
-    int y1;
-    int x2;
-    int y2;
-    double slope;
-    String coord1;
-    String coord2;
+    private int x1;
+    private int y1;
+    private int x2;
+    private int y2;
+    private double slope;
+    private String coord1;
+    private String coord2;
     //constructor
     public LinearEquation(String coord1, String coord2) {
         this.coord1 = coord1;
@@ -35,7 +35,7 @@ public class LinearEquation {
 
     //calculates the equation in slope intercept from
     public String slopeIntForm() {
-        return "y = " + slope + "x" + yInt();
+        return "y = " + slopeCalc() + "x" + " + " + yInt();
     }
 
     //calculates the distance between the two points
@@ -46,7 +46,7 @@ public class LinearEquation {
     //calculates the coordinate pair for a third x value
     public String calcThirdPoint (double x3) {
         double y3 = (slope * x3) + yInt();
-        return "(" + x3 + "," + y3 + ")";
+        return "(" + x3 + "," + roundTo(y3,2) + ")";
     }
 
     //gets the integer value of x1 from coord1
@@ -79,6 +79,11 @@ public class LinearEquation {
 
     //prints the values that were calcualted from the two pairs of coordinate points
     public String toString() {
-        return "First pair: " + coord1 + "\nSecond pair: " + coord2 + "\nSlope of line: " + slope + "\nY-intercept: " + yInt() + "\nSlope intercept form: " + slopeIntForm() + "\nDistance between points: " + distanceCalc();
+        slopeCalc();
+        return "First pair: " + coord1 + "\nSecond pair: " + coord2 + "\nSlope of line: " + roundTo(slope,2) + "\nY-intercept: " + yInt() + "\nSlope intercept form: " + slopeIntForm() + "\nDistance between points: " + roundTo(distanceCalc(),2);
+    }
+
+    public double roundTo(double number, int decimalPlaces) {
+        return Double.parseDouble(String.format(("%." + decimalPlaces + "f"), number));
     }
 }
