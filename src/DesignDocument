@@ -5,6 +5,7 @@ LinearEquation Class
         3. x2 which is an int representing the second x coordinate of the user input
         4. y2 which is an int representing the second y coordinate of the user input
         5. slope which is a double representing the slope of the equation
+
     Constructor:
         LinearEquation(int x1, int y1, int x2, int y2)
             These will be the 4 points provide by the user and although they enter in a String, I will use a substring method to get the integer values
