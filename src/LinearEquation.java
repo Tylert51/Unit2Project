@@ -15,8 +15,6 @@ public class LinearEquation {
         y1 = getCoordY1();
         x2 = getCoordX2();
         y2 = getCoordY2();
-
-
     }
 
     //calculates slope
@@ -52,7 +50,6 @@ public class LinearEquation {
     //gets the integer value of x1 from coord1
     public int getCoordX1 () {
         int commaPlace = coord1.indexOf(",");
-        int closeParenthesisPlace = coord1.indexOf(")");
         return Integer.parseInt(coord1.substring(1, commaPlace));
     }
 
@@ -66,7 +63,6 @@ public class LinearEquation {
     //gets the integer value of x2 from coord2
     public int getCoordX2 () {
         int commaPlace = coord2.indexOf(",");
-        int closeParenthesisPlace = coord2.indexOf(")");
         return Integer.parseInt(coord2.substring(1, commaPlace));
     }
 
